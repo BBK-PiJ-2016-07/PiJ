@@ -20,10 +20,6 @@ public class ErrorHandling {
                 System.out.println("ERROR! wrong input! Enter only integer number: ");
             }
         }
-        System.out.println("User Input is: " + userInputs);
-        System.out.println("setNumberOfInputs " + setNumberOfInputs);
-        
-
         double average = (double)userInputs/(double)setNumberOfInputs;
         System.out.println("Average of Numbers entered is : " + average);
         
