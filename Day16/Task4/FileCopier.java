@@ -14,8 +14,7 @@ public class FileCopier{
     }
 
     public void copy(String inputName, String outputName) {
-        try {
-            BufferedReader in = new BufferedReader(new FileReader( new File(inputName)));
+        try (BufferedReader in = new BufferedReader(new FileReader( new File(inputName)))) {
             PrintWriter out = new PrintWriter( new File (outputName));
             String line;
             while ((line = in.readLine()) != null) {
@@ -24,9 +23,9 @@ public class FileCopier{
             }
             out.close();
         } catch (FileNotFoundException ex) {
-            System.out.println("File " + inputName + " does not exist.");
+            System.out.println("File [ " + inputName + " ] does not exist or it a directory.");
         } catch (IOException ex) {
-            ex.printStackTrace();
+            System.out.println("There was an I/O error.");
         }
 
     }
