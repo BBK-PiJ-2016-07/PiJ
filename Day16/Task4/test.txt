@@ -1,0 +1,13 @@
+This is a test file for Copier.
+
+We are copying all of the text to another file.
+
+All text should be copy as it is appear in this file.
+
+This test file is for PiJ Day16 - Exercise 4.
+
+End
+
+////////
+
+New text added - to check if it work for an existing file
