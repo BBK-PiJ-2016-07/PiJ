@@ -14,7 +14,7 @@ public class Increaser implements Runnable {
     public void run() {
         System.out.println("Starting at " + c.getCount()); 
         for (int i = 0; i < 1000; i++) {
-            c.increase();
+            c.increase();s
         }
         System.out.println("Stopping at " + c.getCount()); 
     }

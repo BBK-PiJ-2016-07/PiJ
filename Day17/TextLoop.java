@@ -17,9 +17,12 @@
 
     private void sleep() { 
         try {
+            System.out.print("Sleeping for a second"); 
             for (int i = 0; i < 5; i++) {
-                Thread.sleep(200); 
+                Thread.sleep(200);
+                System.out.print("."); 
             }
+                System.out.println("done!"); 
             } catch (InterruptedException ex) {
                 ex.printStackTrace(); // Nothing to do, sleep a bit less }
             }

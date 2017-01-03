@@ -23,7 +23,7 @@ public class FileCopier{
             }
             out.close();
         } catch (FileNotFoundException ex) {
-            System.out.println("File [ " + inputName + " ] does not exist or it a directory.");
+            System.out.println("File [ " + inputName + " ] does not exist or it is a directory.");
         } catch (IOException ex) {
             System.out.println("There was an I/O error.");
         }

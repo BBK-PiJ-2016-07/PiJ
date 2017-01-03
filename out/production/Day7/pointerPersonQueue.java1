@@ -1,0 +1,38 @@
+public class pointerPersonQueue implements PersonQueue{
+    private Person lastPerson = null; //this should be called as last
+    private Person firstPerson = null;  //this should be called as first
+
+    public void insert(Person nextPerson){
+        if(nextPerson == null){
+            return; //Do nothing
+        }
+        if(this.lastPerson == null){
+            this.lastPerson = nextPerson;
+            this.firstPerson = nextPerson;
+            return;
+        }
+        nextPerson.setNextPerson(this.lastPerson);
+        this.lastPerson = nextPerson;
+
+        }
+
+    public Person retrive(){
+        if(this.firstPerson == null){
+          return null;
+        }
+        if(this.firstPerson == this.lastPerson){
+            Person result = this.lastPerson;
+            this.lastPerson = null;
+            this.firstPerson = null;
+            return result;
+        }
+        Person result = this.firstPerson;
+        Person current = this.lastPerson;
+
+        while(current.getNextPerson() != this.firstPerson){
+            current = current.getNextPerson();
+            return current;
+        }
+      }
+
+}
